@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: file-hosting-panel
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main_bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: YOUR_BOT_TOKEN_HERE
+      - key: OWNER_ID
+        value: YOUR_TELEGRAM_ID
+      - key: PORT
+        value: 10009
